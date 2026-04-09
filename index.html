@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kampala Central Market - Real-time crop prices, fresh produce &amp; farm products. Pay with mobile money to 0761410920 and get fast delivery across Uganda.">
+    <title>Kampala Central Market | Real Prices • Fresh Produce • Direct from Farmers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --primary: #166534;     /* Deep farm green */
+            --accent: #4ade80;      /* Fresh green */
+        }
+        
+        * {
+            transition: all 0.15s ease;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4ade80;
+        }
+        .nav-link:hover:after { width: 100%; }
+        
+        .feature-card:hover { transform: translateY(-4px); }
+        .price-card:hover { transform: scale(1.02); }
+    </style>
+</head>
+<body class="font-sans antialiased bg-slate-50 text-slate-800">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-x-2">
+                    <div class="w-9 h-9 bg-[#166534] rounded-2xl flex items-center justify-center text-white text-3xl font-bold">🛒</div>
+                    <div>
+                        <span class="text-3xl font-semibold tracking-tighter text-[#166534]">Kampala</span>
+                        <span class="text-3xl font-semibold tracking-tighter text-[#4ade80]">Central</span>
+                        <span class="text-xs font-medium text-slate-500 ml-1 align-super">MARKET</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#home" class="nav-link text-slate-700 hover:text-[#166534]">Home</a>
+                    <a href="#features" class="nav-link text-slate-700 hover:text-[#166534]">Features</a>
+                    <a href="#how" class="nav-link text-slate-700 hover:text-[#166534]">How it Works</a>
+                    <a href="#prices" class="nav-link text-slate-700 hover:text-[#166534]">Market Prices</a>
+                    <a href="#shop" class="nav-link text-slate-700 hover:text-[#166534]">Shop</a>
+                    <a href="#founder" class="nav-link text-slate-700 hover:text-[#166534]">Founder</a>
+                    <a href="#contact" class="nav-link text-slate-700 hover:text-[#166534]">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <div class="hidden sm:flex items-center bg-slate-100 rounded-3xl px-4 py-2 text-sm font-medium">
+                        <i class="fa-solid fa-phone text-[#4ade80] mr-2"></i>
+                        <a href="tel:0761410920" class="hover:text-[#166534]">0761 410 920</a>
+                    </div>
+                    
+                    <div class="flex items-center gap-x-1 bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-3xl">
+                        <i class="fa-solid fa-mobile-screen-button"></i> MoMo / Airtel
+                    </div>
+                    
+                    <a href="https://wa.me/256761410920" target="_blank" 
+                       class="flex items-center justify-center bg-[#4ade80] text-white px-6 h-10 rounded-3xl text-sm font-semibold hover:bg-[#22c55e]">
+                        <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+                    </a>
+                    
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-2xl text-slate-700">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 py-4">
+            <div class="flex flex-col gap-y-4 text-sm font-medium">
+                <a href="#home" class="py-2">Home</a>
+                <a href="#features" class="py-2">Features</a>
+                <a href="#how" class="py-2">How it Works</a>
+                <a href="#prices" class="py-2">Market Prices</a>
+                <a href="#shop" class="py-2">Shop</a>
+                <a href="#founder" class="py-2">Founder</a>
+                <a href="#contact" class="py-2">Contact</a>
+                <a href="tel:0761410920" class="flex items-center text-[#166534]"><i class="fa-solid fa-phone mr-3"></i> 0761 410 920</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="bg-[#166534] text-white py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md text-white text-sm font-medium px-5 py-2 rounded-3xl mb-8">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                LIVE CROP PRICES • UPDATED TODAY
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-semibold leading-none tracking-tighter mb-6">
+                Kampala Central Market<br>
+                Fresh Produce • Real Prices
+            </h1>
+            
+            <p class="text-xl max-w-lg mx-auto text-white/90 mb-10">
+                Direct from farmers to your table.<br>
+                Real-time prices for maize, beans, matooke, cassava &amp; more.<br>
+                Pay safely with mobile money to <strong>0761 410 920</strong>.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#shop" class="inline-flex items-center justify-center bg-white text-[#166534] font-semibold text-lg px-10 h-14 rounded-3xl hover:shadow-xl">
+                    Shop Now <i class="fa-solid fa-arrow-right ml-3"></i>
+                </a>
+                <a href="https://wa.me/256761410920?text=Hi%20Kampala%20Central%20Market%2C%20I%20want%20fresh%20produce" target="_blank"
+                   class="inline-flex items-center justify-center border-2 border-white text-white font-semibold text-lg px-10 h-14 rounded-3xl hover:bg-white/10">
+                    <i class="fa-brands fa-whatsapp mr-2 text-2xl"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <span class="px-4 py-2 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-3xl">OUR ADVANTAGES</span>
+            <h2 class="text-4xl font-semibold mt-4">Why Choose Kampala Central Market</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="feature-card bg-white p-8 rounded-3xl border border-slate-100">
+                <div class="text-4xl mb-6">📊</div>
+                <h3 class="font-semibold text-xl mb-2">Real-Time Prices</h3>
+                <p class="text-slate-600">Daily updated fair prices from Kampala markets.</p>
+            </div>
+            <div class="feature-card bg-white p-8 rounded-3xl border border-slate-100">
+                <div class="text-4xl mb-6">💳</div>
+                <h3 class="font-semibold text-xl mb-2">Easy Mobile Money</h3>
+                <p class="text-slate-600">Pay instantly to <strong>0761 410 920</strong>.</p>
+            </div>
+            <div class="feature-card bg-white p-8 rounded-3xl border border-slate-100">
+                <div class="text-4xl mb-6">🚚</div>
+                <h3 class="font-semibold text-xl mb-2">Fast Delivery</h3>
+                <p class="text-slate-600">24-48 hours in Kampala and nearby areas.</p>
+            </div>
+            <div class="feature-card bg-white p-8 rounded-3xl border border-slate-100">
+                <div class="text-4xl mb-6">🛡️</div>
+                <h3 class="font-semibold text-xl mb-2">Quality Guaranteed</h3>
+                <p class="text-slate-600">Freshness you can trust.</p>
+            </div>
+            <div class="feature-card bg-white p-8 rounded-3xl border border-slate-100">
+                <div class="text-4xl mb-6">📞</div>
+                <h3 class="font-semibold text-xl mb-2">Farmer Support</h3>
+                <p class="text-slate-600">24/7 help with prices and orders.</p>
+            </div>
+            <div class="feature-card bg-white p-8 rounded-3xl border border-slate-100">
+                <div class="text-4xl mb-6">✅</div>
+                <h3 class="font-semibold text-xl mb-2">Verified Sellers</h3>
+                <p class="text-slate-600">Trusted farmers only.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="bg-slate-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-semibold mb-6">How It Works</h2>
+                    <div class="space-y-10">
+                        <div class="flex gap-6">
+                            <div class="w-12 h-12 bg-[#4ade80] text-slate-900 rounded-3xl flex items-center justify-center font-bold text-2xl flex-shrink-0">1</div>
+                            <div>
+                                <h4 class="font-semibold text-2xl">Check Live Prices</h4>
+                                <p class="text-slate-400 mt-2">Browse today's prices for maize, beans, matooke, cassava and more.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-12 h-12 bg-[#4ade80] text-slate-900 rounded-3xl flex items-center justify-center font-bold text-2xl flex-shrink-0">2</div>
+                            <div>
+                                <h4 class="font-semibold text-2xl">Place Order &amp; Pay</h4>
+                                <p class="text-slate-400 mt-2">Send payment to <strong>0761 410 920</strong> via mobile money.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-12 h-12 bg-[#4ade80] text-slate-900 rounded-3xl flex items-center justify-center font-bold text-2xl flex-shrink-0">3</div>
+                            <div>
+                                <h4 class="font-semibold text-2xl">Get Delivered</h4>
+                                <p class="text-slate-400 mt-2">Fresh produce delivered straight to you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARKET PRICES -->
+    <section id="prices" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="mb-12 text-center md:text-left">
+            <span class="px-4 py-2 bg-amber-100 text-amber-700 text-sm font-semibold rounded-3xl">LIVE MARKET PRICES</span>
+            <h2 class="text-4xl font-semibold mt-4">Today's Prices at Kampala Central Market</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="price-card bg-white rounded-3xl p-8 border">
+                <div class="text-5xl mb-4">🌽</div>
+                <h4 class="font-semibold text-xl">Maize (Dry)</h4>
+                <p class="text-xs text-slate-500">Per kg</p>
+                <div class="mt-8 flex justify-between items-end">
+                    <div>
+                        <span class="text-xs text-slate-400">Today’s Price</span>
+                        <p class="text-3xl font-semibold text-emerald-600">UGX 1,200/kg</p>
+                    </div>
+                    <button onclick="addToCart(this)" class="bg-[#166534] text-white px-8 py-3 rounded-3xl text-sm font-medium">Order Now</button>
+                </div>
+            </div>
+
+            <div class="price-card bg-white rounded-3xl p-8 border">
+                <div class="text-5xl mb-4">🫘</div>
+                <h4 class="font-semibold text-xl">Red Beans</h4>
+                <p class="text-xs text-slate-500">Per kg</p>
+                <div class="mt-8 flex justify-between items-end">
+                    <div>
+                        <span class="text-xs text-slate-400">Today’s Price</span>
+                        <p class="text-3xl font-semibold text-emerald-600">UGX 2,800/kg</p>
+                    </div>
+                    <button onclick="addToCart(this)" class="bg-[#166534] text-white px-8 py-3 rounded-3xl text-sm font-medium">Order Now</button>
+                </div>
+            </div>
+
+            <div class="price-card bg-white rounded-3xl p-8 border">
+                <div class="text-5xl mb-4">🍌</div>
+                <h4 class="font-semibold text-xl">Matooke Bunch</h4>
+                <p class="text-xs text-slate-500">Large bunch</p>
+                <div class="mt-8 flex justify-between items-end">
+                    <div>
+                        <span class="text-xs text-slate-400">Today’s Price</span>
+                        <p class="text-3xl font-semibold text-emerald-600">UGX 18,000</p>
+                    </div>
+                    <button onclick="addToCart(this)" class="bg-[#166534] text-white px-8 py-3 rounded-3xl text-sm font-medium">Order Now</button>
+                </div>
+            </div>
+
+            <div class="price-card bg-white rounded-3xl p-8 border">
+                <div class="text-5xl mb-4">🥕</div>
+                <h4 class="font-semibold text-xl">Cassava Roots</h4>
+                <p class="text-xs text-slate-500">Per kg</p>
+                <div class="mt-8 flex justify-between items-end">
+                    <div>
+                        <span class="text-xs text-slate-400">Today’s Price</span>
+                        <p class="text-3xl font-semibold text-emerald-600">UGX 900/kg</p>
+                    </div>
+                    <button onclick="addToCart(this)" class="bg-[#166534] text-white px-8 py-3 rounded-3xl text-sm font-medium">Order Now</button>
+                </div>
+            </div>
+        </div>
+        
+        <p class="text-center text-xs text-slate-500 mt-10">*Prices updated daily from Kampala Central Market • April 09, 2026</p>
+    </section>
+
+    <!-- SHOP CTA -->
+    <section id="shop" class="bg-gradient-to-r from-[#166534] to-[#4ade80] py-20 text-white text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold">Ready to Buy Fresh Produce?</h2>
+            <p class="mt-4 max-w-md mx-auto">Order directly from trusted farmers at Kampala Central Market prices.</p>
+            <div class="mt-10 text-2xl font-mono font-bold">0761 410 920</div>
+            <p class="text-sm mt-2 opacity-75">Send payment via MTN MoMo or Airtel Money</p>
+        </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section id="founder" class="max-w-7xl mx-auto px-6 py-20 bg-white">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7">
+                <h2 class="text-5xl font-semibold tracking-tighter text-[#166534]">Meet the Founder</h2>
+                <h3 class="text-3xl font-semibold text-[#4ade80] mt-3">GORDON MUTESIGANSI</h3>
+                <p class="text-lg text-slate-600 mt-4">Year 2 BSIT Student • Uganda Christian University</p>
+                
+                <div class="prose text-slate-600 mt-8 max-w-prose">
+                    <p>Kampala Central Market was built to bring transparency and fair pricing to buyers and farmers in Uganda. 
+                    No middlemen — just direct connection with real-time prices and easy mobile money payments.</p>
+                </div>
+                
+                <a href="https://wa.me/256761410920?text=Hi%20Gordon%20Mutesigensi%2C%20I%20saw%20your%20Kampala%20Central%20Market%20project" target="_blank"
+                   class="mt-8 inline-flex items-center justify-center bg-[#4ade80] text-white font-semibold px-8 h-12 rounded-3xl hover:bg-[#22c55e]">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Chat with the Founder
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center gap-x-2 justify-center mb-6">
+                <div class="w-9 h-9 bg-white rounded-2xl flex items-center justify-center text-[#166534] text-3xl">🛒</div>
+                <span class="text-4xl font-semibold tracking-tighter">Kampala Central Market</span>
+            </div>
+            <p class="text-slate-400">Fresh produce • Real prices • Direct from farmers</p>
+            
+            <div class="mt-12">
+                <p class="text-xs uppercase mb-2">Call or WhatsApp us</p>
+                <a href="tel:0761410920" class="text-3xl font-medium">0761 410 920</a>
+            </div>
+            
+            <div class="mt-8 text-xs text-slate-500">
+                © 2026 Kampala Central Market • ENT3251 Project
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+        
+        function addToCart(btn) {
+            const originalText = btn.innerHTML;
+            btn.style.backgroundColor = '#16a34a';
+            btn.innerHTML = `<i class="fa-solid fa-check mr-2"></i> Ordered!`;
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.backgroundColor = '';
+                alert("✅ Order placed! Pay via mobile money to 0761 410 920");
+            }, 1500);
+        }
+        
+        window.onload = function() {
+            console.log('%c✅ Kampala Central Market loaded successfully • Founder: Gordon Mutesigensi', 'color:#4ade80; font-family:monospace; font-size:13px');
+        };
+    </script>
+</body>
+</html>
